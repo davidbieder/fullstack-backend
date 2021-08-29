@@ -2,8 +2,10 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: backend
+  annotations:
+    haproxy.router.openshift.io/rewrite-target: /
 spec:
-  host: hostname
+  host: host.name
   path: /api
   tls:
     termination: edge
