@@ -3,6 +3,8 @@ kind: Route
 metadata:
   name: backend
 spec:
+  host: hostname
+  path: /api
   tls:
     termination: edge
   to:
